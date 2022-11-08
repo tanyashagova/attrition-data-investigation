@@ -1,4 +1,4 @@
-This is a midterm project at ML-Zoomcamp-2022 course. It is aimed to solve the employees attrition problem at the company. Model used here makes prediction of attrition of valuable employees. 
+This is a midterm project at ML-Zoomcamp-2022 course. It is aimed to solve the employees attrition problem at the company. The model makes prediction of attrition of valuable employees. 
 
 This project uses a fictional [dataset of employees attrition](https://www.kaggle.com/datasets/whenamancodes/hr-employee-attrition) created by IBM data scientists.
 
