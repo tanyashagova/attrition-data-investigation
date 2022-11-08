@@ -21,11 +21,27 @@ Project folder contains
 
 ## Usage
 
+1. Install dependencies from Pipfile by running command:
+```sh
+pipenv install
+```
+2. Activate virtual environment:
+```sh
+pipenv shell
+```
+3. Run service with waitress:
+```sh
+waitress-serve --listen=0.0.0.0:8080 predict:app
+```
+
+4. Run test.py to see attrition prediction on given data.
+
+Alternatively you can run service with Docker:
 1. Build an image from a Dockerfile by running following command:
 ```sh
 docker build -t attrition-project .
 ```
-2. Run service by command:
+2. Run service:
 ```sh
 docker run --rm -it -p 8080:8080 -d  attrition-project
 ```
