@@ -101,7 +101,7 @@ print('validation')
 kfold = KFold(n_splits=n_splits, shuffle=True, random_state=1)
 
 scores = []
-fold = 0
+
 
 for train_idx, val_idx in kfold.split(df_full_train):
     df_train = df_full_train.iloc[train_idx]
@@ -114,12 +114,10 @@ for train_idx, val_idx in kfold.split(df_full_train):
     y_pred = predict(dv, model, df_val)
     
     auc = roc_auc_score(y_val, y_pred)
-    print(f'fold {fold}, auc = {auc}')
     scores.append(auc)
-    fold += 1
+    
 
-
-print(f'C={C} {np.mean(scores)} +- {np.std(scores)}')
+print(f'auc score = {np.mean(scores)} +- {np.std(scores)}')
 
 
 # training final model and validate it on test data
